@@ -83,6 +83,17 @@ datasource db {
 }
 ```
 
+## Add your first Model 
+You can add your models that you want to implement at the end of `schema.prisma` file , example:
+
+```prisma
+model User {
+  id    Int     @id @default(autoincrement())
+  email String  @unique
+  name  String?
+}
+```
+
 ## Generating
 
 Generate the Prisma Dart client by running the following command:
